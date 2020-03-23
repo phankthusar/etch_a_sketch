@@ -1,0 +1,52 @@
+body {background-color: rgb(255, 255, 255);}
+/*
+.gridRow {
+    border: 1px solid gray;
+    min-width: 10px;
+  min-height: 10px;
+   display: inline-block;
+    
+  }
+  .gridColumn {
+    border: 1px solid gray;
+    min-width: 10px;
+  min-height: 10px;
+  
+  }*/
+#container{
+  
+  width: 50vw;
+  height: 80vh;
+  display: grid;
+  position: absolute;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+  
+  background-color: rgba(112, 184, 53, 0.7);
+  
+}
+
+
+  .gridRow {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(182, 182, 182, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  
+  
+    
+    }
+    
+    
+    
+    /*
+      background-color: blue;
+      display: grid;
+      grid-template-columns: repeat(4, 25%);
+      
+      grid-gap: 10px;
+      background-color: rgba(255,0,0,.7);
+      height: 100%;
+      margin: 10px;
+      padding: 10px;}
+ */

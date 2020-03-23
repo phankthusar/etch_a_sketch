@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Etch a Sketch
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Etch a Sketch
+    </h1>
+    <button id="button">Reset</button>
+    <div id="container">
+    </div>
+
+<script>
+let container = document.getElementById("container");
+let gridRow = document.getElementsByClassName("gridRow");
+let button = document.getElementById("button")
+let size = 16
+let a = function() {return Math.floor(Math.random()*255)}
+
+button.addEventListener("click", function(){
+   
+    size = prompt("how big should the grid be?")
+    container.innerHTML=""
+    creategrid()
+    giveColor()
+})
+
+function creategrid (){
+    for (var i =0;i<size*size;i++){
+
+        let row = document.createElement("div");
+    
+        container.appendChild(row).className = "gridRow";
+        container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+        container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+
+    }
+   
+}
+creategrid()
+
+function giveColor(){for (var i=0; i< gridRow.length; i++){
+gridRow[i].addEventListener("mouseover",function(){
+    this.style.backgroundColor = `rgba(${a()}, ${a()},${a()}, 1)`;
+})
+
+}
+}
+giveColor()
+
+
+
+</script>    
+</body>
+</html>
